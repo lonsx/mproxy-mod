@@ -34,8 +34,8 @@
 - 本代理适用于搭配tiny、http注射器、openvpn等使用，模式可自行指定
 
 ## 注意
-- 源码中代理支持的自定义字段为'Lbxx:'，可以自行替换为其他任意5字节长度字符串，达到防盗用的目的。
-- 模式中要求http部分Lbxx: [H]要紧跟Host:字段之后，https无要求
+- 示例中代理支持的自定义字段为'Lbxx:'，可以自行替换为其他任意适当长度的字符串，达到防盗用的目的。
+- tiny模式中要求http部分Lbxx: [H]要紧跟Host:字段之后，https无要求
 - 云免知识从八云论坛的蜡笔小新。同学处学得很多，谢谢！
 - 源码修改自[examplecode/mproxy](https://github.com/examplecode/mproxy)，感谢！
 
