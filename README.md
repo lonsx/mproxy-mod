@@ -29,19 +29,26 @@
 ## 对于云免应用  
 - 本代理适用于搭配tiny、http注射器、openvpn等使用，模式可自行指定
 - 对于tiny  
-    ./mproxy -l 8080 -m Lbxx: -r 127.0.0.1:443  
-接入点APN可以设置cmnet加上127.0.0.1:65080的代理。  
-文件中包含一个已失效的tiny模式示例。  
-参考[云代理搭建](http://bybbs.org/read-65245-1.html)提到的教程  
+
+    ./mproxy -l 8080 -m Lbxx: -r 127.0.0.1:443
+
+ 接入点APN可以设置cmnet加上127.0.0.1:65080的代理。  
+ 文件中包含一个已失效的tiny模式示例。  
+ 参考[云代理搭建](http://bybbs.org/read-65245-1.html)提到的教程  
 - 对于http注射器  
-    ./mproxy -l 8080 -m Lbxx: -r 127.0.0.1:22(22 is your ssh port)  
+
+    ./mproxy -l 8080 -m Lbxx: -r 127.0.0.1:22(22 is your ssh port)
+
+ 参考:
 > 1.远程代理[your VPS ip]:8080  
 > 2.有效载荷(参考)：CONNECT migumovie.lovev.com:443 [protocol][crlf][delay_split]GET http://miguvod.lovev.com:8080/ [protocol][crlf]User-Agent:  MGPlayer4Android/v6.6.3[crlf]Accept:  */*[crlf]Range:  bytes=0-[crlf]Connection: Keep-Alive[crlf]Host: miguvod.lovev.com:8080[crlf]Icy-MetaData:  1[crlf][crlf]  
 > 3.启动ssh  
 
 - 对于OPENVPN  
-    ./mproxy -l 8080 -m Lbxx: -r 127.0.0.1:443  
-参考:  
+
+    ./mproxy -l 8080 -m Lbxx: -r 127.0.0.1:443
+
+ 参考:  
 > http-proxy-option EXT1 "GET http://miguvod.lovev.com:8080/?"   
 > http-proxy-option EXT1 "Accept:  */*"   
 > http-proxy-option EXT1 "Host: miguvod.lovev.com:8080"   
